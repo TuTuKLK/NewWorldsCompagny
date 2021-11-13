@@ -1,1 +1,9 @@
-<p>nav-bar works!</p>
+<ng-container *ngIf="nav">
+  <div *ngFor="let link of nav">
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a class="pointer" [routerLink]="link.path">{{ link.title }}</a>
+      </li>
+    </ul>
+  </div>
+</ng-container>
