@@ -10,7 +10,6 @@ export class NavBarComponent implements OnInit {
   public nav: Link[]=[
     {title: 'Acceuil', path:''},
     {title: 'Connexion', path:'auth'},
-
   ]
 
   constructor() { }
