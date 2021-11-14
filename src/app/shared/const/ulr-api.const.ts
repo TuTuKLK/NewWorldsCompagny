@@ -1,1 +1,1 @@
-export const urlApi = '';
+export const urlApi = 'http://localhost:5030/';
