@@ -9,6 +9,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { ControlPanelComponent } from './components/control-panel/control-panel.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,13 @@ import { RegisterComponent } from './components/auth/register/register.component
     AuthComponent,
     ControlPanelComponent,
     RegisterComponent
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,15 @@
-<p>register works!</p>
+<ng-container [formGroup]="registerForm" *ngIf="registerForm"> 
+    <div *ngFor="let control of registerForm.controls | keyvalue">
+        <div>
+            <div>
+                {{control.key}}
+            </div>
+            <input type="text" [formControlName]="control.key">
+        </div>
+    </div>
+</ng-container>
+
+<div>
+    <button (click)="submitAuth()">Envoyer</button>
+    <button routerLink='auth'>Annulez</button>
+</div>

@@ -1,1 +1,19 @@
-<p>auth works!</p>
+
+
+<ng-container [formGroup]="authForm" *ngIf="authForm">
+    <div *ngFor="let control of authForm.controls | keyvalue">
+        <div>
+            <div>
+                {{control.key}}
+            </div>
+            <input type="text" [formControlName]="control.key">
+        </div>
+    </div>
+</ng-container>
+
+<div>
+    <button (click)="submitAuth()">Envoyer</button>
+    <button [routerLink]='registerPass'>register</button>
+    <button routerLink='#'>Annulez</button>
+</div>
+
